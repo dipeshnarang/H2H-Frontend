@@ -1,33 +1,4 @@
-// const getListedBooks=async function(yo){
-//     try{
-//         let userId=null
-        
-//         await firebase.auth().onAuthStateChanged((firebaseUser)=>{
-//             if(firebaseUser){
-//                 console.log(firebaseUser.uid)
-//                 userId=firebaseUser.uid
-//             }
-//         })
-
-
-//         const bookData=await axios.get('http://localhost:3010/getBuyBooks',{
-//             params:{
-//                 userId:userId
-//             }
-//         })
-//         const booksArray=bookData.data
-//         booksArray.forEach(book => {
-//             generateDOM(book)
-//         });
-//         console.log(booksArray)
-
-//     }catch(e){
-//         console.log(e)
-//     }    
-// }
-
-
-const getListedBooks=function(yo){
+const getListedBooks=function(){
         let userId=null
         
         firebase.auth().onAuthStateChanged((firebaseUser)=>{
@@ -214,22 +185,16 @@ const addToWishlistFunction=async function(bookObject){
             }
         })
 
-        const User=await axios.get('http://localhost:3010/currentUser',{
-            params:{
-                userId:userId
-            }
+        const wishlistResponse= await axios.post('http://localhost:3010/addItemToWishlist',{
+            userId:userId,
+            bookId:bookObject._id
         })
-        
-        const wishList=User.data[0].wishlist
-        wishList.forEach((item)=>{
-            if(item.item==bookObject._id){
-                alert('Already in your wishList')
-                return
-            }
-        })
-
-        wishList.push(bookObject._id)
-        // await User.save()
+        if(wishlistResponse.data=="Already Present in Wishlist"){
+            alert('Already present in wishlist')
+        }else if(wishlistResponse.data=="Item succesfully added to wishlist"){
+            alert("Item succesfully added to wishlist")
+        }
+        console.log(wishlistResponse)
         
     
     }catch(e){
