@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <link rel="stylesheet" href="./../CSS/signIn.css">
+
+    </head>
+    <body>
+
+        <div class="divForm">
+            <h1>HAND2HAND</h1>
+            <img src="./../images/logo_new.jpg.png" id="logo">
+            <div class="form">
+                <input type="email" placeholder="email" id="emailLogin" class="formElem"><br>
+                <input type="password" placeholder="password" id="password" class="formElem"><br>
+                <button id="signIn" class="formElem">Sign In</button><br>
+                <a href="./../signUp/signUp.html" class="formElem">Don't have an account? Create Now</a>
+
+            </div>
+        </div>
+        <script src="./../firebaseConnection/firebaseAuth.js"></script>
+        <script src="signIn.js"></script>
+        <!-- <script src="loginSingup.js"></script> -->
+
+    </body>
+</html>

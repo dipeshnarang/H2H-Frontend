@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <link rel="stylesheet" href="./../../CSS/homepage.css">
+        <link rel="stylesheet" href="./../../CSS/addBook.css">
+        
+
+    </head>
+    <body>
+
+        <div id="bgImage"></div>
+        <div class="adjustPosition">
+        <header>
+            
+            
+            <div class="header">
+
+
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a id="buyBookButton" href="./homePage.html">BUY</a>
+                    <a href="./addBook.html">ADD ITEM</a>
+                    <a href="#">YOUR LISTINGS</a>
+                    <a href="#">WISHLIST</a>
+                    <a href="#">SETTINGS</a>
+    
+                  </div>
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                
+                <a href="#default" class="logo">HAND2HAND</a>
+                <div class="header-right">
+                <a class="active" href="#home"><img id="cartImg" src="./../../images/cart1.jpg">Cart</a>
+                <a id="contactButton" href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <button id="logout">LOGOUT</button>
+
+                </div>
+            </div>
+
+            
+        </header>
+
+        <div  id="imagePreviewSpcae" >
+            <img id="previewImage" src="./../../images/preview.png" alt="Image Preview">
+        </div>
+
+
+
+        <div class="borderForm" >
+            <form id="addBookForm">
+
+                <div class='formFields'>
+                    <label for="Title" class="label">Title: </label>
+                    <input type="text" id="title" name="title"><br>
+                </div>
+
+                <div class='formFields'>
+                    <label for="description" class="label">Description: </label>
+                    <textarea type="text" id="description" name="description" placeholder="Enter Book Description Here" rows="4" cols="65"></textarea><br>
+                </div>
+
+                
+                
+                <div class='formFields'>
+                    <label for="price" class="label">Price: </label>
+                    <input type="number" id="price" name="price"><br>
+                </div>
+                
+                <div class='formFields'>
+                    <label for="address" class="label">Address:      </label>
+                    <textarea type="text" id="address" name="adress" rows="4" cols="65"></textarea>
+                </div>
+                
+                <div class='formFields'>
+                    <button id="formSubmit">Put Up for Sale</button>
+                </div>
+            </form>
+
+            <div id="displayImage"></div>
+
+        </div>
+
+        <div class='chooseAndUpload'>
+            <input type="file" id="bookImage" accept="image/x-png,image/gif,image/jpeg">
+            <button id="uploadImage">Upload</button><br>
+        </div>
+        
+    </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script src="./navigationFunction.js"></script>
+        <script src="./../firebaseConnection/firebaseAuth.js"></script>
+        <script src="addBook.js"></script>
+        <script src="./logout.js"></script>
+
+    </body>
+</html>

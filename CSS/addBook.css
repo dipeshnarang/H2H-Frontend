@@ -1,0 +1,65 @@
+
+body,html{
+    height:100%;
+    margin:0;
+    background-image: url('./../images/homeImageBlur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/* .adjustPosition{
+
+    transform: translate(0%, -127%);
+} */
+
+/* #bgImage{
+    background-image: url('./../images/homeImage.jpg');
+    height:100%;
+    filter: blur(5px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(8px);
+} */
+
+#addBookForm{
+    width: 40%;
+    margin: 20px;
+    padding: 2%;
+    border:thick solid black;
+    border-radius: 30px;
+    text-align: center;
+    float: right;
+    height: 400px;
+}
+
+.formFields{
+    padding: 10px;
+}
+
+#imagePreviewSpcae{
+    margin: 2%;
+    padding: 2%;
+    width: 40%;
+    border:thick solid black;
+    border-radius: 30px;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+
+.chooseAndUpload{
+    padding: 2%;
+}
+#previewImage{
+    border:thin dotted black;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    
+}
+
+.label{
+    text-decoration: underline;
+    font-size: 20px;
+}

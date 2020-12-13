@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <link rel="stylesheet" href="./../CSS/signUp.css">
+    </head>
+    <body>
+
+        <div class="formDiv">
+            <h1>HAND2HAND</h1>
+            <img src="./../images/logo_new.jpg.png" id="logo">
+            <div class="form">
+                <input type="text" placeholder="Name" id="name" class="formElem"><br>
+                <input type="email" placeholder="Email" id="emailSignup" class="formElem"><br>
+                <input type="text" placeholder="Contact No." id="contactNo" class="formElem"><br>
+                <input type="password" placeholder="New Password" id="newPassword" class="formElem"><br>
+                <input type="password" placeholder="Confirm Password" id="confirmPassword" class="formElem">
+                <p id="pswdNotMatch" class="formElem"></p>
+                <button id="signUp" class="formElem">Sign Up</button><br>
+                <a href="./../signIn/signIn.html" id="linkSignIn">Already have an account? Login Now</a>
+                
+
+            </div>
+
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./../firebaseConnection/firebaseAuth.js"></script>
+        <script src="signUp.js"></script>
+    </body>
+</html>

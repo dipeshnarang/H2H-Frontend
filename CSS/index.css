@@ -1,0 +1,39 @@
+body{
+    background-image: url('./../images/homeImage.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+h1{
+    font-style: italic;
+    font-size: 70px;
+    padding: 10px;
+    margin-top: 150px ;
+    margin-left: 70px;
+}
+#signIn{
+    background-color: aquamarine;
+    font-size: 30px;
+    padding: 10px 40px;
+    border-radius: 15px;
+}
+#signIn:hover{
+    background-color: rgb(19, 160, 225);
+    font-size: 33px;
+
+}
+#signUp{
+    background-color: aquamarine;
+    font-size: 30px;
+    padding: 10px 40px;
+    border-radius: 15px;
+
+}
+#signUp:hover{
+    background-color: rgb(19, 160, 225);
+    font-size: 33px;
+
+}
+.button{
+    margin-left: 130px;
+}

@@ -1,0 +1,49 @@
+body{
+    background-image: url('./../images/homeImage.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.form{
+    padding:10px;
+    align-content: center;
+    margin-left: 100px;
+}
+
+.formElem{
+    padding:5px;
+    margin: 4px;
+    border-radius: 5px;
+    
+}
+
+.formDiv{
+    /* border: thin dotted black; */
+    width: 35%;
+    /* padding: 2%; */
+    margin-left: 10%;
+    margin-top: 100px;
+    float: left;
+
+}
+h1{
+    /* text-align: center; */
+    margin-left: 100px;
+}
+#logo{
+    height: 150px;
+    margin-left: 80px;
+
+}
+#signUp{
+    margin-left: 50px;
+    padding: 5px;
+}
+#signUp:hover{
+    background-color:whitesmoke;
+    font-size: 15px;
+}
+#linkSignIn{
+    margin-right: 85px;
+    text-align: center;
+}
