@@ -176,6 +176,7 @@ const removeListing=function(objectId){
             }).then((res)=>{
                 console.log(res)
                 alert('Deleted Successfully!! Refresh to see changes')
+                location.reload()
             }).catch((e)=>{
 
             })

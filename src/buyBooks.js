@@ -144,6 +144,7 @@ const generateDOM=function(bookObject){
     addToListButton.style.marginTop="10px"
     addToListButton.style.padding="20px"
     addToListButton.style.borderRadius="10px"
+    addToListButton.style.animatio
 
     addToListButton.addEventListener('click',(e)=>{
         console.log(bookObjectId)
@@ -175,9 +176,7 @@ const generateDOM=function(bookObject){
 }
 
 const addToWishlistFunction=async function(bookObject){
-
     try{
-
         let userId=null
         await firebase.auth().onAuthStateChanged((firebaseUser)=>{
             if(firebaseUser){

@@ -24,7 +24,7 @@ body,html{
 
 #addBookForm{
     width: 40%;
-    margin: 20px;
+    margin: 3%;
     padding: 2%;
     border:thick solid black;
     border-radius: 30px;
@@ -38,23 +38,26 @@ body,html{
 }
 
 #imagePreviewSpcae{
-    margin: 2%;
+    margin: 3%;
     padding: 2%;
-    width: 40%;
+    width: 38%;
     border:thick solid black;
     border-radius: 30px;
-    height: 300px;
+    height: 400px;
     float: left;
     text-align: center;
 }
 
 .chooseAndUpload{
+    margin-top: 25%;
     padding: 2%;
+    
 }
 #previewImage{
     border:thin dotted black;
     max-width: 100%;
     max-height: 100%;
+    
     margin: auto;
     
 }
@@ -62,4 +65,27 @@ body,html{
 .label{
     text-decoration: underline;
     font-size: 20px;
+    /* padding:15px; */
+    margin:5px;
+}
+
+#saleButton{
+    text-align: center;
+}
+#formSubmit{
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+#formSubmit:hover{
+    font-size: 27px;
+}
+#description{
+    margin: 7px;
+}
+#address{
+    margin:17px;
+    
 }

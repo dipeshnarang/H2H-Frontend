@@ -34,7 +34,7 @@
                 <div class="header-right">
                 <!-- <a class="active" href="#home"><img id="cartImg" src="./../../images/cart1.jpg">Cart</a> -->
                 <a id="contactButton" href="#contact">Contact</a>
-                <a href="#about">About</a>
+                <a href="./about.html">About</a>
                 <button id="logout">LOGOUT</button>
 
                 </div>
@@ -45,6 +45,13 @@
 
         <div  id="imagePreviewSpcae" >
             <img id="previewImage" src="./../../images/preview.png" alt="Image Preview">
+            <div class='chooseAndUpload'>
+                <input type="file" id="bookImage" accept="image/x-png,image/gif,image/jpeg">
+                <button id="uploadImage">Upload</button><br>
+            </div>
+        
+        
+        
         </div>
 
 
@@ -54,39 +61,40 @@
 
                 <div class='formFields'>
                     <label for="Title" class="label">Title: </label>
-                    <input type="text" id="title" name="title"><br>
+                    <input type="text"  class="label" id="title" name="title"><br>
                 </div>
 
                 <div class='formFields'>
-                    <label for="description" class="label">Description: </label>
-                    <textarea type="text" id="description" name="description" placeholder="Enter Book Description Here" rows="4" cols="65"></textarea><br>
+                    <label for="description" class="label" id="description" >Description: </label>
+                    <textarea type="text" id="description" name="description" placeholder="Enter Book Description Here" rows="4" cols="55"></textarea><br>
                 </div>
 
                 
                 
                 <div class='formFields'>
                     <label for="price" class="label">Price: </label>
-                    <input type="number" id="price" name="price"><br>
+                    <input type="number" class="label" id="price" name="price"><br>
                 </div>
                 
                 <div class='formFields'>
-                    <label for="address" class="label">Address:      </label>
-                    <textarea type="text" id="address" name="adress" rows="4" cols="65"></textarea>
+                    <label for="address" class="label" id="address">Address:      </label>
+                    <textarea type="text" id="address" name="adress" rows="4" cols="55"></textarea>
                 </div>
                 
-                <div class='formFields'>
-                    <button id="formSubmit">Put Up for Sale</button>
-                </div>
-            </form>
+                
 
             <div id="displayImage"></div>
 
+
+            
         </div>
 
-        <div class='chooseAndUpload'>
-            <input type="file" id="bookImage" accept="image/x-png,image/gif,image/jpeg">
-            <button id="uploadImage">Upload</button><br>
+        <div class='formFields' id="saleButton">
+            <button id="formSubmit">Put Up for Sale</button>
         </div>
+    </form>
+
+        
         
     </div>
 

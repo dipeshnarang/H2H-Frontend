@@ -26,6 +26,7 @@ body{
   
   .header .sidenav a:hover {
     color: #f1f1f1;
+    vertical-align: middle;
   }
   
   .header .sidenav .closebtn {
@@ -100,4 +101,18 @@ body{
     height: 20px;
     padding-top: 10px;
     padding-right: 5px;
+}
+
+#heading{
+  border: outset rgb(87, 113, 25);
+  border-radius: 20px;
+  margin:8px;
+  padding: 5px;
+  background-color: #f1f1f1;
+
+}
+
+#top-content{
+  text-align: center;
+  font-size: 20px;
 }

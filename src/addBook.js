@@ -72,6 +72,11 @@ document.querySelector('#addBookForm').addEventListener('submit',async(e)=>{
                 address:address,
                 name:name,
                 contactNo:contactNo
+            }).then((res)=>{
+                alert("Book has been succesfully Listed")
+                location.reload()
+            }).catch((e)=>{
+                alert(e)
             })
         }else{
             alert('Please fill in all the fields')
@@ -80,17 +85,4 @@ document.querySelector('#addBookForm').addEventListener('submit',async(e)=>{
     }catch(e){
         alert(e)
     }
-    
-    
-    
-
-
-    // "userId":"YvFyOKPBs5UVvh2a9mS9BbxeIFA2",
-    // "name":"Dipesh Narang",
-    // "contactNo":"+918130361402",
-    // "address":"South City-2, Gurgaon",
-    // "title":"The Monk Who Sold His Ferrari",
-    // "image":"https://firebasestorage.googleapis.com/v0/b/test-ee7a6.appspot.com/o/0THJ7uLZZOXVz4COFfEiBUeRm0F2%2Fgym_image%2Fimg6.jpg?alt=media",
-    // "description":"This book about the big four companies namely Apple, Google, Facebook and Amazon. It tells hows these companies became so big and control the economy",
-    // "price":400
 })

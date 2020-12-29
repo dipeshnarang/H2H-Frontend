@@ -19,7 +19,10 @@ const wishlist=function(){
                     }).then((res)=>{
                         console.log(res)
                         const bookObject=res.data
-                        generateDOM(bookObject)
+                        if(res.data!=""){
+                            generateDOM(bookObject)
+
+                        }
                     }).catch((e)=>{
                         console.log(e)
                     })
@@ -154,8 +157,8 @@ const generateDOM=function(bookObject){
     addToListButton.style.borderRadius="10px"
 
     addToListButton.addEventListener('click',(e)=>{
-        console.log(bookObjectId)
-        addToWishlistFunction(bookObject)
+        // console.log(bookObjectId)
+        removeFromWishlist(bookObjectId)
     })
 
     divPrice.appendChild(price)
@@ -177,5 +180,26 @@ const generateDOM=function(bookObject){
 
     document.getElementById('booksElem').appendChild(div)
 }
+
+
+const removeFromWishlist=function(objectId){
+    console.log("object ID"+objectId)
+    firebase.auth().onAuthStateChanged((firebaseUser)=>{
+        if(firebaseUser){
+            const uid=firebaseUser.uid
+            axios.post('http://localhost:3010/deleteItemWishlist',{
+                userId:uid,
+                objectId:objectId
+            }).then((res)=>{
+                console.log(res)
+                alert(res.data)
+                location.reload()
+            }).catch((e)=>{
+                console.log(e)
+            })
+        }
+    })
+}
+
 
 wishlist()
