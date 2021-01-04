@@ -9,14 +9,11 @@ document.querySelector('#signIn').addEventListener('click',(e)=>{
     }).catch((e)=>{
         console.log(e)
     })
-    
-
 })
 
 firebase.auth().onAuthStateChanged((firebaseUser)=>{
     if(firebaseUser){
         console.log(firebaseUser)
-        // window.location='homePage.html'
     }else{
         console.log('not logged in')
     }

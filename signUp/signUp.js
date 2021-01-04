@@ -1,14 +1,9 @@
-// const firebaseAuth=require('./firebaseConnection/firebaseAuth')
-
-
 document.querySelector('#signUp').addEventListener('click',async(e)=>{
     const email=document.getElementById('emailSignup').value
     const newpassword=document.getElementById('newPassword').value
     const confirmpassword=document.getElementById('confirmPassword').value
     const name=document.getElementById('name').value
     const contactNo=document.getElementById('contactNo').value
-    // console.log(name+"   "+contactNo)
-
     if(newpassword===confirmpassword){
         const auth=firebase.auth()
         auth.createUserWithEmailAndPassword(email,newpassword)
@@ -34,10 +29,8 @@ document.querySelector('#signUp').addEventListener('click',async(e)=>{
         })
     }else{
         alert('Passwords do not match')
-
     }
     
-
 })
 
 firebase.auth().onAuthStateChanged((firebaseUser)=>{

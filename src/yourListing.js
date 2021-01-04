@@ -46,12 +46,14 @@ const generateDOM=function(bookObject){
     // divImage.style.border="thin dotted black"
     divImage.style.objectFit="fill"
     divImage.style.display="block"
+    divImage.style.textAlign="center"
 
     //Contents of Image---------------
     const image=document.createElement('img')
     image.src=bookObject.image
     image.style.maxHeight="100%"
     image.style.maxWidth="100%"
+    
 
     
     //Book Title
