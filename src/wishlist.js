@@ -3,7 +3,7 @@ const wishlist=function(){
     firebase.auth().onAuthStateChanged((firebaseUser)=>{
         if(firebaseUser){
             userId=firebaseUser.uid
-            axios.get('http://localhost:3010/currentUser',{
+            axios.get(currentUserUrl,{
                 params:{
                     userId:userId
                 }
@@ -12,7 +12,7 @@ const wishlist=function(){
                 const wishlistArr=res.data[0].wishlist
                 wishlistArr.forEach((book)=>{
                     const bookId=book.item
-                    axios.get('http://localhost:3010/getBook',{
+                    axios.get(getBookUrl,{
                         params:{
                             bookId:bookId
                         }
@@ -189,7 +189,7 @@ const removeFromWishlist=function(objectId){
     firebase.auth().onAuthStateChanged((firebaseUser)=>{
         if(firebaseUser){
             const uid=firebaseUser.uid
-            axios.post('http://localhost:3010/deleteItemWishlist',{
+            axios.post(deleteItemWishlist,{
                 userId:uid,
                 objectId:objectId
             }).then((res)=>{

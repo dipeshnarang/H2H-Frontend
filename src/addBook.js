@@ -21,7 +21,8 @@ document.querySelector('#uploadImage').addEventListener('click',async(e)=>{
     if(curImage!=undefined){
         const formData=new FormData()
         formData.append('image',curImage)
-        const imageUrl=await axios.post('http://localhost:3010/h2h-image-upload',formData,{
+        const uploadImageUrl=uploadImageUrl
+        const imageUrl=await axios.post(uploadImageUrl,formData,{
             headers:{
                 'Content-Type': `multipart/form-data`
             }
@@ -45,8 +46,9 @@ document.querySelector('#addBookForm').addEventListener('submit',async(e)=>{
                 userId=firebaseUser.uid
             }
         })
-    
-        const user=await axios.get('http://localhost:3010/currentUser',{
+        
+        const currentUserUrl=currentUserUrl
+        const user=await axios.get(currentUserUrl,{
             params:{
                 userId:userId
             }
@@ -63,7 +65,8 @@ document.querySelector('#addBookForm').addEventListener('submit',async(e)=>{
         const contactNo=user.data[0].contactNo
     
         if(userId!=null && title!=null && price!=null){
-            const book=await axios.post('http://localhost:3010/addBook',{
+            const urlAddBook=addBookUrl
+            const book=await axios.post(urlAddBook,{
                 userId:userId,
                 title:title,
                 description:description,

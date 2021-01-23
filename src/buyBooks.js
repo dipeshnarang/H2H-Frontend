@@ -5,7 +5,7 @@ const getListedBooks=function(){
             if(firebaseUser){
                 console.log(firebaseUser.uid)
                 userId=firebaseUser.uid
-                axios.get('http://localhost:3010/getBuyBooks',{
+                axios.get(getBuyBooksUrl,{
                     params:{
                         userId:userId
                     }
@@ -186,7 +186,8 @@ const addToWishlistFunction=async function(bookObject){
             }
         })
 
-        const wishlistResponse= await axios.post('http://localhost:3010/addItemToWishlist',{
+        // const addToWishlistUrl=addToWishlistUrl
+        const wishlistResponse= await axios.post(addToWishlistUrl,{
             userId:userId,
             bookId:bookObject._id
         })
@@ -199,7 +200,9 @@ const addToWishlistFunction=async function(bookObject){
         
     
     }catch(e){
+        console.log(e)
         alert(e)
+        
     }
     
 }

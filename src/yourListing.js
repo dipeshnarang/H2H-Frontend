@@ -4,7 +4,7 @@ const getYourListings=function(){
     firebase.auth().onAuthStateChanged((firebaseUser)=>{
         if(firebaseUser){
             userId=firebaseUser.uid
-            const myListings=axios.get('http://localhost:3010/getMyListings',{
+            const myListings=axios.get(getMyListingsUrl,{
                 params:{
                     userId:userId
                 }
@@ -171,7 +171,7 @@ const removeListing=function(objectId){
     firebase.auth().onAuthStateChanged((firebaseUser)=>{
         if(firebaseUser){
             userId=firebaseUser.uid
-            axios.delete('http://localhost:3010/deleteBook',{
+            axios.delete(deleteBookUrl,{
                 params:{
                     objectId:objectId
                 }

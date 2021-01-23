@@ -11,7 +11,7 @@ document.querySelector('#signUp').addEventListener('click',async(e)=>{
             const uid=user.user.uid
             console.log("After creation: ")
             console.log(uid)
-            axios.post('http://localhost:3010/newUser',{
+            axios.post(newUserUrl,{
                 userId:uid,
                 name:name,
                 email:email,
