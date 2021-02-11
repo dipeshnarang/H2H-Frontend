@@ -3,29 +3,16 @@ const wishlist=function(){
     firebase.auth().onAuthStateChanged((firebaseUser)=>{
         if(firebaseUser){
             userId=firebaseUser.uid
-            axios.get(currentUserUrl,{
+            axios.get(getWishlistUrl,{
                 params:{
                     userId:userId
                 }
             }).then((res)=>{
-                console.log(res.data[0].wishlist)
-                const wishlistArr=res.data[0].wishlist
+                console.log(res.data.wishlist)
+                const wishlistArr=res.data.wishlist
                 wishlistArr.forEach((book)=>{
-                    const bookId=book.item
-                    axios.get(getBookUrl,{
-                        params:{
-                            bookId:bookId
-                        }
-                    }).then((res)=>{
-                        console.log(res)
-                        const bookObject=res.data
-                        if(res.data!=""){
-                            generateDOM(bookObject)
-
-                        }
-                    }).catch((e)=>{
-                        console.log(e)
-                    })
+                    const bookObj=book.item
+                    generateDOM(bookObj)
                 })
             }).catch((e)=>{
                 console.log(e)
@@ -33,8 +20,6 @@ const wishlist=function(){
         }
     })
 }
-
-
 
 
 
